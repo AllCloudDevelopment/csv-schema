@@ -25,22 +25,22 @@ export function detectType (sample) {
   if (sample === '') {
     return 'null'
   } else if (sample.includes('-') && moment(sample, 'YYYY-MM-DD', true).isValid()) {
-    return 'date'
+    return 'Date'
   } else if (sample.includes('-') && moment(sample, moment.ISO_8601, true).isValid()) {
-    return 'datetime'
+    return 'Datetime'
   } else if (moment(sample, 'X', true).isValid() && +sample >= 31536000) {
     // sanity check since '1' is technically a timestamp (>= 1971)
-    return 'timestamp'
+    return 'Number'
   } else if (!isNaN(sample) && sample.includes('.')) {
-    return 'float'
+    return 'Decimal'
   } else if (sample === '1' || sample === '0' || ['true', 'false'].includes(sample.toLowerCase())) {
-    return 'boolean'
+    return 'Checkbox'
   } else if (!isNaN(sample)) {
-    return 'integer'
+    return 'Number'
   } else if (sample.length > 255) {
-    return 'text'
+    return 'Text'
   } else {
-    return 'string'
+    return 'Text'
   }
 }
 

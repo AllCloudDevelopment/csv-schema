@@ -4,14 +4,14 @@ import {partial} from 'lodash'
 class SchemaTable extends React.Component {
   get fieldTypes () {
     return [
-      'string',
-      'text',
-      'boolean',
-      'integer',
-      'float',
-      'date',
-      'datetime',
-      'timestamp'
+      'Text',
+      'Checkbox',
+      'Number',
+      'Decimal',
+      'Date',
+      'Datetime',
+      'Formula',
+      'Lookup'
     ]
   }
 

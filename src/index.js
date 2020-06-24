@@ -25,8 +25,9 @@ class App extends React.Component {
     const isFileSet = this.state.file.name
     return (
       <div>
-        <h1>CSV Schema</h1>
-        <p>Analyzes a CSV file and generates database table schema, all within the browser</p>
+        <h1>CSV Validator / Custom Object Generator</h1>
+        <p>Analyzes and validates a CSV file and generates a Salesforce custom object metadata 
+        definition, and a JSON schema for the CSV file, all within the browser</p>
         <FileInput onSendFile={this.onSendFile} />
         {isFileSet && <FileDetails file={this.state.file} rowCount={this.state.rowCount} />}
         {isFileSet && <ExportMenu file={this.state.file} fields={this.state.fields} />}
