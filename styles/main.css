@@ -53,4 +53,7 @@ footer {
 .export-result {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   font-size: 90%;
+  max-height: 600px;
+  overflow-y: scroll;
+  border-radius:0;
 }

@@ -77,14 +77,22 @@ export function determineWinner (fieldTypes) {
 
   if (keys.length === 1) {
     return keys[0]
-  } else if (fieldTypes.text) {
-    return 'text'
-  } else if (fieldTypes.string) {
-    return 'string'
-  } else if (fieldTypes.float) {
-    return 'float'
-  } else if (fieldTypes.integer) {
-    return 'integer'
+  } else if (fieldTypes.Text) {
+    return 'Text'
+  } else if (fieldTypes.Checkbox) {
+    return 'Checkbox'
+  } else if (fieldTypes.Number) {
+    return 'Number'
+  } else if (fieldTypes.Decimal) {
+    return 'Decimal'
+  } else if (fieldTypes.Date) {
+    return 'Date'
+  } else if (fieldTypes.Datetime) {
+    return 'Datetime'    
+  } else if (fieldTypes.Formula) {
+    return 'Formula'
+  } else if (fieldTypes.Lookup) {
+    return 'Lookup'    
   } else { // TODO: if keys.length > 1 then... what? always string? what about date + datetime?
     return fieldTypes[0]
   }

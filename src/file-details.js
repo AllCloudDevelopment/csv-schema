@@ -5,8 +5,8 @@ class FileDetails extends React.Component {
     const bytes = this.props.file.size ? this.formatBytes(this.props.file.size) : 0
     return (
       <h3>
-        {this.props.file.name}
-        <small>{bytes}</small>
+        {this.props.file.name}&nbsp;&nbsp;
+        <small>{bytes}</small>&nbsp;&nbsp;
         <small>{this.props.rowCount} rows</small>
       </h3>
     )
